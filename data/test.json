@@ -1,0 +1,102 @@
+[
+    {
+        "name": "osx",
+        "shortcuts": [
+            {
+                "name": "copy",
+                "action": "copy selected text",
+                "keys": "CMD + C"
+            },
+            {
+                "name": "paste",
+                "action": "paste clipboard contents",
+                "keys": "CMD + V"
+            }
+        ]
+    },
+    {
+        "name": "Firefox",
+        "shortcuts": [
+            {
+                "name": "search",
+                "action": "focus and type in address bar",
+                "keys": "CMD + K"
+            },
+            {
+                "name": "cycle tabs",
+                "action": "move between tabs",
+                "keys": "Shift + CMD + [ \u0026 ]"
+            },
+            {
+                "name": "move tabs",
+                "action": "move a tab",
+                "keys": "CTRL + CMD + PGUP \u0026 PGDN"
+            }
+        ]
+    },
+    {
+        "name": "tmux",
+        "shortcuts": [
+            {
+                "name": "Sessions",
+                "action": "list sessions",
+                "keys": "tmux ls"
+            },
+            {
+                "name": "Adjustments",
+                "action": "adjust pannel",
+                "keys": "resizep"
+            },
+            {
+                "name": "",
+                "action": "Create new window",
+                "keys": "C-s c"
+            }
+        ]
+    },
+    {
+        "name": "GMail",
+        "shortcuts": [
+            {
+                "name": "",
+                "action": "select message",
+                "keys": "V"
+            },
+            {
+                "name": "",
+                "action": "delete message",
+                "keys": "D"
+            },
+            {
+                "name": "",
+                "action": "navigate",
+                "keys": "up=J; down=K; left=H; right=L"
+            },
+            {
+                "name": "",
+                "action": "go to inbox",
+                "keys": "go"
+            }
+        ]
+    },
+    {
+        "name": "nvim",
+        "shortcuts": [
+            {
+                "name": "",
+                "action": "reindent line",
+                "keys": "=="
+            },
+            {
+                "name": "",
+                "action": "reindent file",
+                "keys": "ggvG="
+            },
+            {
+                "name": "",
+                "action": "replay last action",
+                "keys": "."
+            }
+        ]
+    }
+]

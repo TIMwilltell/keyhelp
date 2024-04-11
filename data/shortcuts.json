@@ -1,0 +1,41 @@
+[
+	{
+		"_id": 1,
+		"application": "osx",
+		"shortcuts": [
+			{
+				"name": "copy",
+				"action": "copy selected text",
+				"shortcut": "CMD-C"
+			},
+			{
+				"name": "paste",
+				"action": "past clipboard contents",
+				"shortcut": "CMD-V",
+
+			}
+		]
+	},
+	{
+		"_id": 2,
+		"application": "Firefox",
+		"shortcuts": [
+			{
+				"name": "search",
+				"action": "focus and type in address bar",
+				"shortcut": "CMD-K",
+			},		
+			{
+				"name": "cycle tabs",
+				"action": "move between tabs",
+				"shortcut": "Shift + CMD + [ & ]",
+			},
+			{
+				"name": "move tabs",
+				"action": "move a tab",
+				"shortcut": "Shift + CTRL + PGUP & PGDN",
+			}
+
+		]
+	}
+]
