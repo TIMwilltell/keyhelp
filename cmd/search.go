@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"strings"
 	"log"
+	"github.com/texttheater/golang-levenshtein/levenshtein"
 	"github.com/spf13/cobra"
 )
 
@@ -74,15 +75,35 @@ func searchShortcutsByAction(action string) {
 		log.Fatalf("Failed to load shortcuts: %v", err)
 	}
 
-	found := false
+	found         := false
+	minDistance   := len(action)
+	closestMatch  := ""
+	closestApp    := ""
+	closestAction := ""
 
 	for _, app := range apps {
 		for _, sc := range app.Shortcuts {
-			if strings.EqualFold(sc.Action, action) {
-				fmt.Printf("Found in %s: %s - %s\n", app.Name, sc.Action, sc.Keys)
+			scActionLower := strings.ToLower(sc.Action)
+			actionLower := strings.ToLower(action)
+
+			if scActionLower == actionLower {
+				fmt.Printf("Exact match found in %s: %s - %s\n", app.Name, sc.Action, sc.Keys)
 				found = true
+			} else {
+				distance := levenshtein.DistanceForStrings([]rune(scActionLower), []rune(actionLower), levenshtein.DefaultOptions) 
+				if distance < minDistance {
+					minDistance = distance
+					closestMatch = fmt.Sprintf("Fuzzy Found in %s: %s - %s\n", app.Name, sc.Action, sc.Keys)
+					closestApp = app.Name
+					closestAction = sc.Action
+				}
 			}
 		}
+	}
+
+	if !found && closestMatch != "" {
+		fmt.Println(closestMatch)
+		found = true
 	}
 
 	if !found {

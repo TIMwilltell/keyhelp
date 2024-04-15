@@ -30,7 +30,17 @@
             {
                 "name": "move tabs",
                 "action": "move a tab",
-                "keys": "CTRL + CMD + PGUP \u0026 PGDN"
+                "keys": "⇧⌃ + PGUP \u0026 PGDN"
+            },
+            {
+                "name": "",
+                "action": "toggle Darkreader",
+                "keys": "⇧⌥D"
+            },
+            {
+                "name": "",
+                "action": "toggle Darkreader for current site",
+                "keys": "⇧⌥A"
             }
         ]
     },
